@@ -2,7 +2,7 @@
   "author": "HackerOne",
   "name": "@itpsolver/react-datepicker",
   "description": "A simple and reusable datepicker component for React",
-  "version": "v0.0.10",
+  "version": "v0.0.11",
   "license": "MIT",
   "homepage": "https://github.com/itpsolver/react-datepicker",
   "main": "dist/index.js",
@@ -35,8 +35,8 @@
     "url": "https://github.com/itpsolver/react-datepicker/issues"
   },
   "publishConfig": {
-   "itpsolver:registry": "https://npm.pkg.github.com"
- }
+   "@itpsolver:registry": "https://npm.pkg.github.com"
+ },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/helpers": "^7.5.5",
