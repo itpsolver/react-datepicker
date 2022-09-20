@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: '16.x'
       - run: echo "NPM_TOKEN=[${{ secrets.NPM_TOKEN }}]"
-      - run: npm install
+      - run: npm install --legacy-peer-deps
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
