@@ -2,7 +2,7 @@
   "author": "HackerOne",
   "name": "@itpsolver/react-datepicker",
   "description": "A simple and reusable datepicker component for React",
-  "version": "v0.0.28",
+  "version": "v0.0.29",
   "license": "MIT",
   "homepage": "https://github.com/itpsolver/react-datepicker",
   "main": "dist/index.js",
