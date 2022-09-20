@@ -11,14 +11,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
-      - run: echo "NPM_TOKEN=[${{ secrets.NPM_TOKEN }}]"
-      - run: echo "NPM_TOKEN=[${{ env.NPM.NPM_TOKEN }}]"      
-      - run: echo "NPM_TOKEN=[${{ env.NPM_TOKEN }}]"            
-      - run: echo "NPM_TOKEN=[${{ secrets.NPM.NPM_TOKEN }}]"
+      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
       - run: npm install --legacy-peer-deps
       - uses: JS-DevTools/npm-publish@v1
         with:
-          always-auth: true
           token: ${{ secrets.NPM_TOKEN }}
   publish-github-registry:
     runs-on: ubuntu-latest
