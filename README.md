@@ -1,3 +1,9 @@
+## This is for test and private use.
+## Please use original version of react-datepicker
+
+---
+
+
 # React Date Picker
 
 [![npm version](https://badge.fury.io/js/react-datepicker.svg)](https://badge.fury.io/js/react-datepicker)
