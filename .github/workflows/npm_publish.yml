@@ -21,7 +21,7 @@ jobs:
       - run: npm install --legacy-peer-deps
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_SECRET }}
+          NODE_AUTH_TOKEN: ${{ NPM.NPM_SECRET }}
   publish-github-registry:
     runs-on: ubuntu-latest
     permissions:
