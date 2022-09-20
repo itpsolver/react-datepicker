@@ -5,17 +5,18 @@ on:
     types: [created]
 jobs:
   publish-npm-registry:
+    environment: NPM
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
-      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN2 }}" >> .npmrc
+      # - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
       - run: npm install --legacy-peer-deps
       - uses: JS-DevTools/npm-publish@v1
         with:
-          token: ${{ secrets.NPM_TOKEN2 }}
+          token: ${{ secrets.NPM_TOKEN }}
   publish-github-registry:
     runs-on: ubuntu-latest
     permissions:
