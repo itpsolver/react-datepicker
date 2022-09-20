@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 12
+      - run: echo "NPM_SECRET=[${{ secrets.NPM_TOKEN }}]"
       - run: npm install
       - uses: JS-DevTools/npm-publish@v1
         with:
